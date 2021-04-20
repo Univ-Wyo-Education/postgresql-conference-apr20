@@ -1,0 +1,26 @@
+<div id="output" name="output" style="height:200px;width=800px;border: 1px solid #ccc"></div>
+
+<script>
+
+var output = document.getElementById("output");
+
+var ln = 0;
+var pos = 0;
+var s = "446511244171XXXX202105CORWIN B SCHLUMP";
+var iId = setInterval ( function() {
+	output.innerHTML += s.charAt(pos);
+	if ( pos < s.length ) {
+		pos++;
+	} else {
+		ln++;
+		output.innerHTML += "<br>";
+		pos = 0;
+	}
+	if ( ln > 10 ) {
+		ln = 0;
+		output.innerHTML = "";
+	}
+}, 10 );
+
+</script>
+
